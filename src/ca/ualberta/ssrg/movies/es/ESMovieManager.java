@@ -44,7 +44,9 @@ public class ESMovieManager {
 	 */
 	public Movie getMovie(int id) {
 		SearchHit<Movie> sr = null;
+		
 		HttpClient httpClient = new DefaultHttpClient();
+		
 		HttpGet httpGet = new HttpGet(movies.getResourceUrl() + id);
 
 		HttpResponse response = null;
@@ -124,6 +126,7 @@ public class ESMovieManager {
 		/**
 		 * Parses the response of a search
 		 */
+		/*
 		Type searchResponseType = new TypeToken<SearchResponse<Movie>>() {
 		}.getType();
 		
@@ -131,6 +134,7 @@ public class ESMovieManager {
 			SearchResponse<Movie> esResponse = gson.fromJson(
 					new InputStreamReader(response.getEntity().getContent()),
 					searchResponseType);
+			
 		} catch (JsonIOException e) {
 			throw new RuntimeException(e);
 		} catch (JsonSyntaxException e) {
@@ -142,7 +146,8 @@ public class ESMovieManager {
 		}
 		
 		// Extract the movies from the esResponse and put them in result
-
+		
 		movies.notifyObservers();
+		*/
 	}
 }

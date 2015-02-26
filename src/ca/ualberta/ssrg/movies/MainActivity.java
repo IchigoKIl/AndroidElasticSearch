@@ -38,7 +38,7 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onStart() {
 		super.onStart();
-
+		
 		movies = new Movies();
 		moviesViewAdapter = new ArrayAdapter<Movie>(this, R.layout.list_item,movies);
 		movieList.setAdapter(moviesViewAdapter);
@@ -69,16 +69,16 @@ public class MainActivity extends Activity {
 				return true;
 			}
 		});
+		
 	}
-
+	
 	@Override
 	protected void onResume() {
 		super.onResume();
 		
-		
-
 		// Refresh the list when visible
 		// TODO: Search all
+		
 		
 	}
 	
