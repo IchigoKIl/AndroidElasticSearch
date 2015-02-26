@@ -126,7 +126,7 @@ public class ESMovieManager {
 		/**
 		 * Parses the response of a search
 		 */
-		/*
+		
 		Type searchResponseType = new TypeToken<SearchResponse<Movie>>() {
 		}.getType();
 		
@@ -148,6 +148,5 @@ public class ESMovieManager {
 		// Extract the movies from the esResponse and put them in result
 		
 		movies.notifyObservers();
-		*/
 	}
 }
